@@ -6,10 +6,7 @@
 
 Install:
 ```python
-%install_ext https://raw.github.com/cjdrake/ipython-magic/master/gvmagic.py
-```
-Load:
-```python
+%install_ext https://raw.githubusercontent.com/bornio/ipython-magic/master/gvmagic.py
 %load_ext gvmagic
 ```
 
@@ -25,15 +22,17 @@ Load:
 
 Examples:
 
-    %dot digraph G { a -> b; a -> c }
+```python
+%dot digraph G { a -> b; a -> c }
 
-    %%dot digraph G {
-        a -> b;
-        b -> c;
-    }
+%%dot digraph G {
+  a -> b;
+  b -> c;
+}
 
-    %dotstr "digraph G { a -> b; a -> c }"
+%dotstr "digraph G { a -> b; a -> c }"
 
-    %dotobj dotobj.to_dot()
+%dotobj dotobj.to_dot()
 
-    %dotobjs dotojb[0].to_dot(), dotobj[1].to_dot(), ...
+%dotobjs dotojb[0].to_dot(), dotobj[1].to_dot(), ...
+```
